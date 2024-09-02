@@ -1,0 +1,5 @@
+[02-Sep-2024 08:20:40 UTC] PHP Warning:  Undefined variable $qsid in /Users/moukhtaroumar/Local Sites/planty/app/public/wp-content/plugins/child-theme-configurator/includes/classes/CSS.php on line 958
+[02-Sep-2024 08:20:40 UTC] PHP Warning:  Undefined variable $qsid in /Users/moukhtaroumar/Local Sites/planty/app/public/wp-content/plugins/child-theme-configurator/includes/classes/CSS.php on line 960
+[02-Sep-2024 08:20:40 UTC] PHP Warning:  Undefined variable $qsid in /Users/moukhtaroumar/Local Sites/planty/app/public/wp-content/plugins/child-theme-configurator/includes/classes/CSS.php on line 967
+[02-Sep-2024 08:20:40 UTC] PHP Warning:  Undefined variable $qsid in /Users/moukhtaroumar/Local Sites/planty/app/public/wp-content/plugins/child-theme-configurator/includes/classes/CSS.php on line 968
+[02-Sep-2024 08:20:40 UTC] PHP Warning:  Undefined variable $qsid in /Users/moukhtaroumar/Local Sites/planty/app/public/wp-content/plugins/child-theme-configurator/includes/classes/CSS.php on line 971
