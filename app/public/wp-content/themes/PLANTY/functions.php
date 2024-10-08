@@ -1,9 +1,8 @@
 <?php
-// Exit if accessed directly
+
 if ( !defined( 'ABSPATH' ) ) exit;
 
-// BEGIN ENQUEUE PARENT ACTION
-// AUTO GENERATED - Do not modify or remove comment markers above or below:
+
 
 if ( !function_exists( 'chld_thm_cfg_locale_css' ) ):
     function chld_thm_cfg_locale_css( $uri ){
@@ -21,4 +20,21 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
-// END ENQUEUE PARENT ACTION
+function add_admin_link_to_menu($items, $args) {
+    // Vérifier si l'utilisateur est connecté et s'il a les droits d'administrateur
+    if (is_user_logged_in() && current_user_can('manage_options')) {
+        if (!is_admin()) {
+            $admin_url = admin_url();
+            $admin_link = '<li class="menu-item"><a href="'. $admin_url .'">Admin</a></li>';
+            
+            $menu_items = explode('</li>', $items); 
+            
+            array_splice($menu_items, 1, 0, $admin_link);
+            
+            $items = implode('</li>', $menu_items);
+        }
+    }
+    return $items; 
+}
+add_filter('wp_nav_menu_items', 'add_admin_link_to_menu', 10, 2);
+
