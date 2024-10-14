@@ -10,17 +10,18 @@ Version: 2024.2.1725265240
 Updated: 2024-09-02 08:20:40
 
 */
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 800
 
-.syne-<uniquifier> {
+.syne-uniquifier {
   font-family: "Syne", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: weight;
   font-style: normal;
 }
 body{
     font-family: "Syne", sans-serif;
+}
+.elementor-shortcode form {
+    max-width: 1440px !important;
 }
 
 .post-edit-link {
@@ -151,7 +152,7 @@ form textarea {
     position: absolute;
     bottom: 0;
     left: 20px;
-    z-index: -1;
+    z-index: 0;
     width: 147px;
     height: 134px;
     pointer-events: none;
@@ -160,6 +161,10 @@ form textarea {
     margin-left: -71px;
 }
 
+form textarea {
+    z-index: 1;
+    position: relative;
+}
 
 form input[type="submit"].bouton {
     width: 198px;
@@ -182,13 +187,12 @@ form input[type="submit"].bouton:hover {
     background-color: #c99393;
 }
 
-/* Media Queries pour ajuster sur les petits écrans */
 @media (max-width: 768px) {
     form {
         padding: 15px;
     }
 
-    .imgform {
+    .barre-horizontale {
         bottom: -10px;
         left: -5px;
         width: 80px;
@@ -225,19 +229,14 @@ form input[type="submit"].bouton:hover {
     }
 }
 
-
-
-
 .commande-container {
     width: 100%;
     max-width: 900px; 
     margin: 0 auto; 
-    padding: 40px;
     background-color: #326238; 
     border-radius: 15px;
     color: #fff; 
 }
-
 
 .commande-container h1 {
     font-size: 30px;
@@ -367,12 +366,12 @@ input[type="number"] {
     }
 
     .commande-container h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
     }
     .commande-container {
         width: 100%;
-        /* max-width: 900px; */
-        /* margin: 0 auto; */
         margin-top: 50px;
         background-color: #326238;
         border-radius: 15px;
@@ -382,7 +381,7 @@ input[type="number"] {
 @media (max-width: 425px) {
     .commande-container {
         width: auto;
-        padding: Opx;
+        padding: O;
         margin: 0;
     }
 
@@ -394,7 +393,15 @@ input[type="number"] {
 }
 @media (max-width: 320px) {
     .commande-container {
-        width: 230px;
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        .commande-container h1 {
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
     }
 
     .colonne input[type="text"],
@@ -403,13 +410,6 @@ input[type="number"] {
         height: 50px;
     }
 }
-
-
-
-.elementor-shortcode form {
-    max-width: 1440px !important;
-}
-
 
 @media (max-width: 768px) {
     .menu-icon {
@@ -435,7 +435,55 @@ input[type="number"] {
     form input[type="email"],
     form textarea {
         width: 300px;
+    }   
+
+}
+@media (max-width: 410px) {
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 300px;
     }
     
+}
+@media (max-width: 479px) {
+    .menu {
+        margin-bottom: 20px;
+    }
+    #menu-item-38 {
+    border-radius: 50px;
+    background: #3b8e46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 130px;
+    color: #fff !important;
+    }
+    .menu-item a {
+        color: rgb(255 255 255);
+        text-decoration: none;
+        font-size: 16px;
+    }
+    #menu-item-40 {
+        border-radius: 50px;
+        background: #DC9F96;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 130px;
+        color: #fff;
+    }
 
+}
+@media (max-width: 375px) {
+    .elementor-6 .elementor-element.elementor-element-4ff1182 .elementor-heading-title {
+        font-size: 24px !important;
+    }
+}
+@media (max-width: 768px) {
+    .elementor-6 .elementor-element.elementor-element-9401ee6 {
+        --width: 100% !important;
+    }
 }

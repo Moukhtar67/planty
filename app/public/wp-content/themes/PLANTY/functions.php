@@ -21,7 +21,7 @@ endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
 function add_admin_link_to_menu($items, $args) {
-    // Vérifier si l'utilisateur est connecté et s'il a les droits d'administrateur
+    
     if (is_user_logged_in() && current_user_can('manage_options')) {
         if (!is_admin()) {
             $admin_url = admin_url();
