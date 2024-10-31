@@ -25,7 +25,7 @@ function add_admin_link_to_menu($items, $args) {
     if (is_user_logged_in() && current_user_can('manage_options')) {
         if (!is_admin()) {
             $admin_url = admin_url();
-            $admin_link = '<li class="menu-item"><a href="'. $admin_url .'">Admin</a></li>';
+            $admin_link = '<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="'. $admin_url .'">Admin</a></li>';
             
             $menu_items = explode('</li>', $items); 
             

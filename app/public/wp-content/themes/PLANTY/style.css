@@ -440,6 +440,7 @@ input[type="number"] {
 @media (max-width: 479px) {
     .menu {
         margin-bottom: 20px;
+        flex-wrap: wrap;
     }
     #menu-item-38 {
     border-radius: 50px;
